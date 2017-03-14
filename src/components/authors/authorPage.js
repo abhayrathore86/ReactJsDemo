@@ -1,24 +1,27 @@
-var React=require('react');
-var AuthorsList=require('./authorList');
-import {Link,browserHistory} from 'react-router'
+import React from 'react';
+import AuthorsList from'./authorList';
+import {Link} from 'react-router'
 import axios from 'axios';
-var toastr = require('toastr');
+import toastr from 'toastr';
 
-var Authors=React.createClass({
-	componentWillMount:function() {
+class Authors extends React.Component{
+	constructor(props) {
+          super(props);
+          //this.handleChange = this.handleChange.bind(this)
+          this.state = {
+                authors:[],
+                count:0
+          };
+          this.deleteAuthor=this.deleteAuthor.bind(this);
+        }
+	componentWillMount() {
       axios.get('http://localhost:3001/api/data')
 		 .then(res => {
 		 	this.setState({authors: res.data });
-		 })
-
-   },
-	getInitialState:function(){
-		return {
-			authors:[],
-			count:0
-		}
-	},
-	deleteAuthor:function(id){
+		 });
+   }
+	
+	deleteAuthor(id){
 		if(confirm("Do you really want to delete this author?")){
 			axios.delete('http://localhost:3001/api/data?id='+id)
 		 .then(res => {
@@ -32,16 +35,16 @@ var Authors=React.createClass({
 		 	//browserHistory.push('/authors/');
 		 })
 		}
-	},
+	}
 	
-	componentDidMount:function(){
+	componentDidMount(){
 		
 		//this.forceUpdate();
 		axios.get('http://localhost:3001/api/data')
 		 .then(res => {
 		 	this.setState({authors: res.data });
 		 })
-	},
+	}
 	/*
 	clickHere:function(){
 		this.setState({count:this.state.count + 1},()=>{
@@ -51,7 +54,7 @@ var Authors=React.createClass({
 		});
 		console.log(this.state.count);
 	},*/
-	render: function() {
+	render() {
 		//this.forceUpdate();
 		return (
 			<div>
@@ -63,6 +66,6 @@ var Authors=React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports=Authors;
+export default Authors;

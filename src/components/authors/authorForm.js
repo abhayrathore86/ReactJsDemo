@@ -1,7 +1,7 @@
-var React=require('react');
-var Input=require('../common/input');
-var AuthorForm=React.createClass({
-	render: function() {
+import React from'react';
+import Input from '../common/input';
+class AuthorForm extends React.Component{
+	render() {
 		return (
 			<div>
 			<form id="authForm" onSubmit={this.props.onSave}>
@@ -17,6 +17,5 @@ var AuthorForm=React.createClass({
 			</div>
 		);
 	}
-});
-
-module.exports=AuthorForm;
+}
+export default AuthorForm;

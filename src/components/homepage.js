@@ -1,7 +1,7 @@
-var React=require('react');
+import React from'react';
 import { Link} from 'react-router'
-var Home=React.createClass({
-	render:function(){
+class Home extends React.Component{
+	render(){
 		return (
 			<div className='jumbotron'>
 				<h1>React Test</h1>
@@ -10,6 +10,6 @@ var Home=React.createClass({
 			</div>
 			);
 	}
-});
+}
 
-module.exports=Home;
+export default Home;

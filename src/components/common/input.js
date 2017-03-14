@@ -1,15 +1,8 @@
-var React=require('react');
+import React from'react';
 
-var Input=React.createClass({
-	propTypes:{
-		name:React.PropTypes.string.isRequired,
-		label:React.PropTypes.string.isRequired,
-		type:React.PropTypes.string.isRequired,
-		placeholder:React.PropTypes.string.isRequired,
-		error:React.PropTypes.string
-
-	},
-	render:function(){
+class Input extends React.Component{
+	
+	render(){
 		var wrapperClass="form-group";
 		if(this.props.error && this.props.error.length > 0){
 			wrapperClass+= " " +
@@ -26,11 +19,19 @@ var Input=React.createClass({
 				ref={this.props.name}
 				
 			/>
-			<div className="input">{this.props.error}</div>
 			</div>
+		
 			</div>
 			)
 	}
-});
+}
+Input.propTypes={
+		name:React.PropTypes.string.isRequired,
+		label:React.PropTypes.string.isRequired,
+		type:React.PropTypes.string.isRequired,
+		placeholder:React.PropTypes.string.isRequired,
+		error:React.PropTypes.string
 
-module.exports=Input;
+	}
+
+export default Input;

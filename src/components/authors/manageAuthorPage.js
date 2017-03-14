@@ -1,22 +1,25 @@
-
-var React = require('react');
-var _ = require('lodash');
-var AuthorForm = require('./authorForm');
+/* eslint-disable */
+import React from'react';
+import _ from 'lodash';
+import AuthorForm from './authorForm';
 import {browserHistory} from 'react-router';
-var toastr = require('toastr');
+import toastr from 'toastr';
 import axios from 'axios';
-var _generateId = function (author) {
-    return author.firstName.toLowerCase() + '-' + author.lastName.toLowerCase();
-};
-var ManageAuthorPage = React.createClass({
 
-    getInitialState: function () {
-        return {
+class ManageAuthorPage extends  React.Component {
+
+    constructor(props) {
+          super(props);
+          //this.handleChange = this.handleChange.bind(this)
+          this.state = {
             author: {firstName: '', lastName: '', age: ''/*,profile:''*/},
             errors: {firstName: '', lastName: '', age: ''/*,profile:''*/}/*
              dirty:false*/
         };
-    },
+        this.saveAuthor=this.saveAuthor.bind(this);
+        this.saveData=this.saveData.bind(this);
+
+    }
     /*
      componentWillMount:function(){
 
@@ -65,13 +68,13 @@ var ManageAuthorPage = React.createClass({
 
         //console.log(this.state.dirty);
     },*/
-    saveAuthor: function (author) {
+    saveAuthor(author) {
         axios.post('http://localhost:3001/api/data', author);
         return author;
-    },
+    }
 
 
-    saveData: function (e) {
+    saveData(e) {
 
         e.preventDefault();
         /*
@@ -129,8 +132,8 @@ var ManageAuthorPage = React.createClass({
 
         //AuthorsList.authors.push(data);
 
-    },
-    render: function () {
+    }
+    render() {
         return (
             <div>
                 <AuthorForm author={this.state.author} onSave={this.saveData}
@@ -138,6 +141,6 @@ var ManageAuthorPage = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = ManageAuthorPage;
+export default ManageAuthorPage;

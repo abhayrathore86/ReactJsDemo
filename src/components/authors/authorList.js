@@ -1,9 +1,9 @@
-var React=require('react');
+import React from'react';
 import {Link} from 'react-router'
 
-var AuthorsList=React.createClass({
+class AuthorsList extends React.Component{
 	
-	render: function() {
+	render() {
 		//var i=0;
 
 		var createAuthorRow=function(author,i){
@@ -40,6 +40,6 @@ var AuthorsList=React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports=AuthorsList;
+export default AuthorsList;

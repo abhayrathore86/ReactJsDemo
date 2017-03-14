@@ -1,7 +1,7 @@
-var React=require('react');
+import React from'react';
 import {Link} from 'react-router'
-var Header=React.createClass({
-	render:function(){
+class Header extends React.Component{
+	render(){
 		return (
 			<nav className='navbar navbar-default'>
 				<div className='container-fluid'>
@@ -20,6 +20,6 @@ var Header=React.createClass({
 			</nav>
 			);
 	}
-});
+}
 
-module.exports=Header;
+export default Header;
