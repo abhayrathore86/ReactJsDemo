@@ -1,17 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from'react';
+import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute, Redirect} from 'react-router'
-var Home = require('./components/homepage');
-var About = require('./components/about/aboutpage');
-var Authors = require('./components/authors/authorPage');
-var notFoundPage = require('./components/notFoundPage');
-var Header = require('./components/common/header');
-var manageAuthorPage = require('./components/authors/manageAuthorPage');
-var updateAuthorPage = require('./components/authors/updateAuthor');
-var test=require('./test');
+import Home from './components/homepage';
+import About from './components/about/aboutpage';
+import Authors from './components/authors/authorPage';
+import notFoundPage from './components/notFoundPage';
+import Header from './components/common/header';
+import manageAuthorPage from './components/authors/manageAuthorPage';
+import updateAuthorPage from './components/authors/updateAuthor';
+import test from './test';
 
-var App = React.createClass({
-    render: function () {
+class App extends React.Component{
+    render() {
         return (
             <div>
                 <Header/>
@@ -21,9 +21,9 @@ var App = React.createClass({
             </div>
         );
     }
-});
-var RouteD = React.createClass({
-    render: function () {
+}
+class RouteD extends React.Component{
+    render() {
         return (<Router history={browserHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
@@ -39,5 +39,5 @@ var RouteD = React.createClass({
             </Route>
         </Router>);
     }
-});
+}
 ReactDOM.render(<RouteD />, document.getElementById('app'));

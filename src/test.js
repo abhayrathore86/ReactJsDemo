@@ -1,20 +1,19 @@
-var React=require('react');
-var ReactBSTable = require('react-bootstrap-table');
-var BootstrapTable = ReactBSTable.BootstrapTable;
-var TableHeaderColumn = ReactBSTable.TableHeaderColumn;
+import React from'react';
+import {BootstrapTable,TableHeaderColumn} from'react-bootstrap-table';
+
 import axios from 'axios';
 
-var products = []
-// It's a data format example.
 
 
-var Test=React.createClass({
-    getInitialState:function(){
-        return {
-            data:[]
+class Test extends React.Component {
+    constructor(props) {
+          super(props);
+          //this.handleChange = this.handleChange.bind(this)
+          this.state = {
+                data:[]
+          };
         }
-    },
-    render:function(){
+    render(){
         axios.get('http://localhost:3001/api/data')
          .then(res => {
             this.setState({
@@ -66,7 +65,7 @@ var Test=React.createClass({
             </BootstrapTable>
         );
     }
-});
+}
 
-module.exports=Test;
+export default Test;
 
