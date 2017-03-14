@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.js"],"names":[],"mappings":";;AACA,IAAI,eAAe,QAAQ,uBAAR,CAAnB;AACA,IAAI,iBAAiB,aAAa,cAAlC;AACA,IAAI,oBAAoB,aAAa,iBAArC","file":"test-compiled.js","sourcesContent":["\r\nvar ReactBSTable = require('react-bootstrap-table');\r\nvar BootstrapTable = ReactBSTable.BootstrapTable;\r\nvar TableHeaderColumn = ReactBSTable.TableHeaderColumn;\r\n\r\n\r\n"]}

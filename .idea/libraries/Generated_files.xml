@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/api/authorData-compiled.js" />
+        <item url="file://$PROJECT_DIR$/server-compiled.js" />
+        <item url="file://$PROJECT_DIR$/build/static/js/main.7d60327e-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/api/authorApi-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/test-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/build/static/js/main.e13cabde-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.e13cabde-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.f74b9a20-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.861be77f-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.f74b9a20-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.861be77f-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.87df1288-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.87df1288-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/authors/manageAuthorPage-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/api/authorData-compiled.js" />
+      <root url="file://$PROJECT_DIR$/server-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.7d60327e-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/api/authorApi-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/test-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
